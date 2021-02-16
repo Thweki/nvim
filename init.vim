@@ -7,6 +7,17 @@ set wrap		"warp
 set ignorecase		"ignorecase
 set smartcase		"smartcase
 set foldmethod=manual
+
+set statusline=
+set statusline+=%#Normal#
+set statusline+=\ %F
+set statusline+=\ %y
+set statusline+=%=
+set statusline+=%m
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ \ %l,%c
+set statusline+=\ \ \ \ \ \ %P
+set statusline+=\
 " === Settings End ===
 
 
@@ -22,13 +33,10 @@ noremap <LEADER><CR> :nohlsearch<CR>	"No hightlight search
 " === Vim-plug ===
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'				"AirLine
-Plug 'vim-airline/vim-airline-themes'			"AirLine-Theme
 Plug 'lervag/vimtex'					"Vimtex
 Plug '907th/vim-auto-save'				"Auto Save
 Plug 'frazrepo/vim-rainbow'				"Rainbow
 Plug 'jiangmiao/auto-pairs'				"Auto pairs
-Plug 'xuhdev/vim-latex-live-preview'			"Latex live preview
 Plug '520Matches/fcitx5.vim'				"Fcitx5
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		"Coc.nvim
 Plug 'honza/vim-snippets' 				"Snippets
@@ -40,14 +48,10 @@ Plug 'joshdick/onedark.vim' 				"Color-scheme onedark
 Plug 'glepnir/dashboard-nvim' 				"Start page
 Plug 'rhysd/accelerated-jk' 				"Accelerated JK
 Plug 'godlygeek/tabular' 				"Align regions of text
+Plug 'tpope/vim-commentary'                             "Use gc to commentary
 
 call plug#end()
 " === Vim-plug End ===
-
-
-" === AirlineTheme ===
-let g:airline_theme="fruit_punch"
-" === AirlineTheme End ===
 
 
 " === VimTheme ===
